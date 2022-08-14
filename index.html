@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+       <title>OOPs </title>
+       <link rel="stylesheet" href="./assets/fonts/font-awesome/css/all.css">
+       <link rel="stylesheet" href="./assets/css/">
+   </head>
+   <body>
+
+        <div class="container my-3">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h2>Add new Staff</h2>
+                            <div class="msg"></div>
+                            <hr>
+                            <form method="POST" id="staff_add_form">
+                                <div class="mb-3">
+                                    <label for="">Name</label>
+                                    <input name="name" type="text" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="">Cell</label>
+                                    <input name="cell" type="text" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="">Location</label>
+                                    <input name="location" type="text" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="">Photo</label>
+                                    <input name="photo" type="text" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="submit" class="btn btn-primary w-100" value="Submit">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-5">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2>All Staff data</h2>
+                            <hr>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name</th>
+                                        <th>Cell</th>
+                                        <th>Location</th>
+                                        <th>Photo</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="dom_data">
+                                    <tr>
+                                        <td>${index + 1}</td>
+                                        <td>${name}</td>
+                                        <td>${cell}</td>
+                                        <td>${location}</td>
+                                        <td>
+                                            <img style="width:40px; height: 40x; object-fit: content;" src="#" alt="">
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-info btn-sm"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></button>
+                                            <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+    
+   </body>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+   <script type="module" src="./app.js"></script>
+</html>
